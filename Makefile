@@ -11,3 +11,4 @@ zfs_mount: zfs_mount.c
 
 /usr/bin/zfs_mount: zfs_mount
 	install -m755 $< $@
+	strip $@
