@@ -73,6 +73,7 @@ int main(int argc, char* argv[]) {
 
     zfs_handle_t *zfs_handle = zfs_open(libzfs_handle, dataset, ZFS_TYPE_FILESYSTEM);
     if (zfs_handle == NULL) {
+        fputs("zfs_open failed\n", stderr);
         return 1;
     }
 
